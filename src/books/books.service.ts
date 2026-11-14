@@ -16,7 +16,7 @@ export class BooksService {
     async getAllBooks() {
         let result = await this.bookRepo.find(
             {
-                withDeleted: true
+                //  withDeleted: true
             }
         )
         return result
@@ -44,7 +44,47 @@ export class BooksService {
         return bookToRestore;
     }
     async recoverBook(bookId: number) {
-        //let bookToRestore = await this.bookRepo.recover()
-        //return bookToRestore;
+        let bookToRecover = await this.bookRepo.findOne({ where: { id: bookId }, withDeleted: true })
+        if (!bookToRecover)
+            throw new NotFoundException(`Aucun livre avec l'id ${bookId} n'existe`)
+        let result = await this.bookRepo.recover(bookToRecover)
+        return result;
+    }
+
+    async updateBook(uBook: any, bookId: number) {
+        let updatedBook = await this.bookRepo.preload(
+            {
+                id: bookId,
+                title: uBook.title,
+                editor: uBook.editor,
+                image: uBook.image,
+                year: uBook.year
+            }
+        );
+        if (!updatedBook)
+            throw new NotFoundException(`On peut pas mettre à jour le livre d'id ${bookId}`)
+        let res = await this.bookRepo.save(updatedBook);
+        return res
+
+    }
+
+    async statistiques() {
+
+        let qb = this.bookRepo.createQueryBuilder("book")
+        let result = await qb.select("book.year, count(book.id) as NbreLivres")
+            .groupBy("book.year")
+            .getRawMany()
+
+        return result;
+    }
+
+    async booksbyYears(year1: number, year2: number) {
+        let qb = this.bookRepo.createQueryBuilder("book")
+        let result = await qb.select("book")
+            // .where("book.year >= :y1 and book.year <= :y2")
+            .where("book.year between :y1 and :y2")
+            .setParameters({ y1: year1, y2: year2 })
+            .getRawMany()
+        return result;
     }
 }
