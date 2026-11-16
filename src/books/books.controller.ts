@@ -6,6 +6,12 @@ export class BooksController {
 
     constructor(private bookService: BooksService) { }
 
+    @Post('init')
+    async initialiserLivres(@Body() corps: any) {
+        let result = await this.bookService.initBooks(corps)
+        return { message: "Bibliothéque initialisée", res: result }
+        // return Reponse
+    }
     @Post('add')
     async ajouterLivre(@Body() corps: any) {
         let result = await this.bookService.addBook(corps)

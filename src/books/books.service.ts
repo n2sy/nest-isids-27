@@ -8,6 +8,11 @@ export class BooksService {
 
     constructor(@InjectRepository(BookEntity) private bookRepo: Repository<BookEntity>) { }
 
+    async initBooks(allBooks: any[]) {
+        let result = await this.bookRepo.insert(allBooks);
+        return result
+    }
+
     async addBook(newBook: any) {
         let result = await this.bookRepo.save(newBook)
         return result
