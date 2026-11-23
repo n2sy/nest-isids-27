@@ -1,0 +1,68 @@
+info:
+  name: Init Authors
+  type: http
+  seq: 20
+
+http:
+  method: POST
+  url: http://localhost:3000/author/init
+  body:
+    type: json
+    data: |-
+      [
+          {
+            "id": 3,
+            "prenom": "Albert",
+            "nom": "Camus",
+            "createdAt": "2025-02-28 20:56:06.938223",
+            "updateAt": "2025-02-28 20:56:06.938223",
+            "deleteAt": null
+          },
+          {
+            "id": 4,
+            "prenom": "Harper",
+            "nom": "Lee",
+            "createdAt": "2025-02-28 20:56:23.615439",
+            "updateAt": "2025-02-28 20:56:23.615439",
+            "deleteAt": null
+          },
+          {
+            "id": 5,
+            "prenom": "F. Scott",
+            "nom": "Fitzgerald",
+            "createdAt": "2025-02-28 20:56:38.416736",
+            "updateAt": "2025-02-28 20:56:38.416736",
+            "deleteAt": null
+          },
+          {
+            "id": 6,
+            "prenom": "Gabriel Garcia",
+            "nom": "Marquez",
+            "createdAt": "2025-02-28 20:56:54.741436",
+            "updateAt": "2025-02-28 20:56:54.741436",
+            "deleteAt": null
+          },
+          {
+            "id": 7,
+            "prenom": "Herman",
+            "nom": "Melville",
+            "createdAt": "2025-02-28 20:57:09.033346",
+            "updateAt": "2025-02-28 20:57:09.033346",
+            "deleteAt": null
+          },
+          {
+            "id": 8,
+            "prenom": "Leo",
+            "nom": "Tolstoy",
+            "createdAt": "2025-02-28 20:57:25.300185",
+            "updateAt": "2025-02-28 20:57:25.300185",
+            "deleteAt": null
+          }
+        ]
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

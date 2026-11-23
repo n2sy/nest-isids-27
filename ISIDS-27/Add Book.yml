@@ -1,0 +1,24 @@
+info:
+  name: Add Book
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: http://localhost:3001/books/add
+  body:
+    type: json
+    data: |-
+      {
+        "title" : "La formule de dieu 8",
+        "editor" : "ISIDS",
+        "year" : 2021,
+        "image" : "url 2"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

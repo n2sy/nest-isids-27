@@ -1,0 +1,22 @@
+info:
+  name: Add Author
+  type: http
+  seq: 23
+
+http:
+  method: POST
+  url: http://localhost:3000/author/add
+  body:
+    type: json
+    data: |-
+      {
+        "prenom": "Amine",
+        "nom": "Rghidi"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

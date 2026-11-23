@@ -1,0 +1,27 @@
+info:
+  name: Put Task
+  type: http
+  seq: 7
+
+http:
+  method: PUT
+  url: http://localhost:3000/tasks/1?ddd=dddd
+  params:
+    - name: ddd
+      value: dddd
+      type: query
+  body:
+    type: json
+    data: |-
+      {
+        "title" : "Task 400",
+        "status" : "todo",
+        "year" : "2026"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,23 @@
+info:
+  name: Sign Up
+  type: http
+  seq: 24
+
+http:
+  method: POST
+  url: http://localhost:3000/auth/signup
+  body:
+    type: json
+    data: |-
+      {
+        "email": "sami@gmail.com",
+        "username": "sami",
+        "password" : "azerty"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

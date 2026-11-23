@@ -1,0 +1,23 @@
+info:
+  name: Delete Task
+  type: http
+  seq: 6
+
+http:
+  method: DELETE
+  url: http://localhost:3000/tasks/20
+  body:
+    type: json
+    data: |-
+      {
+        "title" : "Task 400",
+        "status" : "todo",
+        "year" : "2026"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

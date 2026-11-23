@@ -1,0 +1,18 @@
+info:
+  name: Get Boook By Id
+  type: http
+  seq: 11
+
+http:
+  method: GET
+  url: http://localhost:3000/books/12
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

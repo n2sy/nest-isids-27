@@ -1,0 +1,18 @@
+info:
+  name: Restore Book
+  type: http
+  seq: 14
+
+http:
+  method: PATCH
+  url: http://localhost:3000/books/restore/2
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,92 @@
+info:
+  name: Init Books
+  type: http
+  seq: 19
+
+http:
+  method: POST
+  url: http://localhost:3000/books/init
+  body:
+    type: json
+    data: |-
+      [
+          {
+            "id": 12,
+            "title": "The Outsider",
+            "year": 1942,
+            "editor": "Secker & Warburg",
+            "createdAt": "2025-02-28 20:58:25.059222",
+            "updateAt": "2025-02-28 21:16:17.286274",
+            "deleteAt": null,
+            "authorId": 3,
+            "image": "https://covers.openlibrary.org/b/id/7222246-L.jpg",
+            "summary": "Ce roman existentialiste explore l'absurdité de la condition humaine à travers Meursault, un homme indifférent à son propre destin. Après avoir commis un meurtre insensé, il est confronté à un procès où son manque d’émotion choque la société. Camus y développe le concept de l’absurde et questionne la morale sociale."
+          },
+          {
+            "id": 13,
+            "title": "To Kill a Mockingbird",
+            "year": 1960,
+            "editor": "J.B. Lippincott & Co.",
+            "createdAt": "2025-02-28 20:59:40.459568",
+            "updateAt": "2025-02-28 21:28:43.638871",
+            "deleteAt": null,
+            "authorId": 4,
+            "image": "https://covers.openlibrary.org/b/id/8225261-L.jpg",
+            "summary": "Ce classique de la littérature américaine suit Scout Finch, une jeune fille grandissant dans le sud ségrégationniste des États-Unis. À travers les yeux de l'enfant, le roman aborde des thèmes comme la justice, le racisme et l'innocence perdue. L'histoire est marquée par le procès poignant d’un homme noir accusé à tort."
+          },
+          {
+            "id": 14,
+            "title": "The Great Gatsby",
+            "year": 1925,
+            "editor": "Charles Scribner's Sons",
+            "createdAt": "2025-02-28 21:00:47.998398",
+            "updateAt": "2025-02-28 21:28:22.904309",
+            "deleteAt": null,
+            "authorId": 5,
+            "image": "https://covers.openlibrary.org/b/id/7222161-L.jpg",
+            "summary": "Dans cette fresque des années folles, Gatsby, un millionnaire énigmatique, cherche à reconquérir son amour perdu, Daisy Buchanan. Le roman dépeint la décadence et l’illusion du rêve américain à travers les fêtes somptueuses et les désillusions de ses personnages. Une critique intemporelle de la société de consommation."
+          },
+          {
+            "id": 15,
+            "title": "100 Years of Solitude",
+            "year": 1967,
+            "editor": "Harper & Row",
+            "createdAt": "2025-02-28 21:01:33.442083",
+            "updateAt": "2025-02-28 21:19:08.889169",
+            "deleteAt": null,
+            "authorId": 6,
+            "image": "https://covers.openlibrary.org/b/id/8231991-L.jpg",
+            "summary": "Ce chef-d'œuvre du réalisme magique retrace l’histoire de la famille Buendía sur plusieurs générations dans le village fictif de Macondo. Entre prophéties, guerres civiles et événements surnaturels, le roman explore les cycles de l’histoire et la solitude des êtres humains. Un récit fascinant et onirique qui défie le temps."
+          },
+          {
+            "id": 16,
+            "title": "Moby Dick",
+            "year": 1851,
+            "editor": "Harper & Brothers",
+            "createdAt": "2025-02-28 21:02:30.031289",
+            "updateAt": "2025-02-28 21:18:38.113102",
+            "deleteAt": null,
+            "authorId": 7,
+            "image": "https://covers.openlibrary.org/b/id/7222256-L.jpg",
+            "summary": "Ishmael embarque sur un baleinier sous le commandement du capitaine Achab, obsédé par la traque de Moby Dick, une baleine blanche légendaire. Ce roman d'aventure est aussi une méditation philosophique sur la vengeance, la folie et la nature humaine. Une œuvre incontournable de la littérature maritime."
+          },
+          {
+            "id": 17,
+            "title": "War and Peace",
+            "year": 1869,
+            "editor": "The Russian Messenger",
+            "createdAt": "2025-02-28 21:03:09.471970",
+            "updateAt": "2025-02-28 21:17:34.741253",
+            "deleteAt": null,
+            "authorId": 8,
+            "image": "https://covers.openlibrary.org/b/id/7222261-L.jpg",
+            "summary": "Un récit épique qui mêle fiction et histoire pour peindre la Russie durant les guerres napoléoniennes. À travers les destins croisés de plusieurs familles aristocratiques, Tolstoï interroge le sens de la guerre, du pouvoir et du destin. Un chef-d’œuvre de la littérature mondiale par son ampleur et sa profondeur."
+          }
+        ]
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

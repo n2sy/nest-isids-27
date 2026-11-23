@@ -1,0 +1,18 @@
+info:
+  name: Soft Delete Book
+  type: http
+  seq: 12
+
+http:
+  method: DELETE
+  url: http://localhost:3000/books/delete/2
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

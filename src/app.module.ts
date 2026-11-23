@@ -3,6 +3,7 @@ import { AppController } from './app.controller.js';
 import { TasksModule } from './tasks/tasks.module.js';
 import { BooksModule } from './books/books.module.js';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { AuthModule } from './auth/auth.module.js';
 
 @Module({
     imports: [TasksModule, BooksModule, TypeOrmModule.forRoot(
@@ -16,7 +17,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
             autoLoadEntities: true,
             synchronize: true
         }
-    )],
+    ), AuthModule],
     controllers: [AppController],
 })
 export class AppModule { }

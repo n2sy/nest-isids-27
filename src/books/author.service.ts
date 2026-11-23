@@ -13,5 +13,17 @@ export class AuthorService {
         return result
     }
 
+    async getAllAuthors() {
+        return await this.authorRepo.find()
+    }
+
+    async getAuthorById(authorId: number) {
+        return await this.authorRepo.findOneBy({ id: authorId })
+    }
+
+    async addAuthor(newAuthor: any) {
+        return await this.authorRepo.save(newAuthor)
+    }
+
 
 }

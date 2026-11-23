@@ -1,0 +1,24 @@
+info:
+  name: Update Book
+  type: http
+  seq: 16
+
+http:
+  method: PUT
+  url: http://localhost:3000/books/update/20
+  body:
+    type: json
+    data: |-
+      {
+        "title" : "La formule de dieu",
+        "editor" : "Nidhal",
+        "year" : 2018,
+        "image" : "new url"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

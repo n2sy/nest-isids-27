@@ -28,7 +28,8 @@ export class BooksService {
     }
 
     async getBookById(bookId: any) {
-        let result = await this.bookRepo.findOne({ where: { id: bookId } })
+        let result = await this.bookRepo.findOne({ where: { id: bookId }, relations: { author: true } })
+        // let result = await this.bookRepo.findOne({ where: { id: bookId }, loadRelationIds: true })
         if (!result)
             throw new NotFoundException(`Aucun livre avec l'id ${bookId} n'existe`)
         return result
